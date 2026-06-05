@@ -1,0 +1,4 @@
+[
+  {"id":"demo-1","nombre":"Caso de ejemplo","estado":"En expansión","ubicacion":"México","fecha":"Por confirmar","resumen":"Espacio reservado para una nota redactada con autorización, respeto y cuidado legal.","palabras":["memoria","búsqueda","expansión"]},
+  {"id":"demo-2","nombre":"Registro pendiente","estado":"En expansión","ubicacion":"Por documentar","fecha":"Por confirmar","resumen":"Este registro muestra cómo se verán las tarjetas antes de publicar casos reales.","palabras":["archivo","familias"]}
+]

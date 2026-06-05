@@ -1,0 +1,88 @@
+/* --- HERO SECTION --- */
+.hero {
+  position: relative;
+  display: grid;
+  place-items: center;
+  min-height: 100vh;
+  overflow: hidden;
+  text-align: center;
+}
+
+/* Background Layers */
+.hero-bg {
+  position: absolute;
+  inset: 0;
+  background: url('../assets/images/hero-odpmx.png') center/cover no-repeat;
+  filter: brightness(0.78);
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+    circle at center,
+    rgba(0, 0, 0, 0.15),
+    rgba(0, 0, 0, 0.72) 70%,
+    #000 100%
+  );
+}
+
+/* Content */
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 0 20px;
+}
+
+.hero h1 {
+  margin: 0;
+  font-size: clamp(5rem, 15vw, 13rem);
+  font-weight: 950;
+  line-height: 0.82;
+  letter-spacing: -0.08em;
+}
+
+.hero h1 span {
+  color: #006847
+}
+
+.subtitle {
+  margin: 18px 0 8px;
+  font-family: Georgia, serif;
+  font-size: clamp(1rem, 2vw, 1.45rem);
+  color: #eee;
+}
+
+.statement {
+  margin: 0 0 34px;
+  font-family: Georgia, serif;
+  font-size: clamp(1.4rem, 3vw, 2.2rem);
+  color: white;
+}
+
+/* UI Elements */
+.scroll-indicator {
+  position: absolute;
+  bottom: 34px;
+  left: 50%;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 42px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  transform: translateX(-50%);
+  color: #fff;
+}
+
+/* --- EXPANSION SECTION --- */
+.expansion {
+  padding-top: 30px;
+}
+
+.expansion .panel {
+  max-width: 1000px;
+  margin: auto;
+  text-align: center;
+}

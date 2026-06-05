@@ -1,0 +1,3 @@
+const detail=document.getElementById('caseDetail');
+const params=new URLSearchParams(location.search);const id=params.get('id');
+async function loadDetail(){const res=await fetch('data/casos.json');const data=await res.json();const c=data.find(x=>x.id===id)||data[0];detail.innerHTML=`<h1>${c.nombre}</h1><div class="meta"><span>${c.estado}</span><span>${c.ubicacion}</span><span>${c.fecha}</span></div><p>${c.resumen}</p><div class="notice"><p><strong>Nota editorial:</strong> esta página es una plantilla. En casos reales, evita acusaciones, detalles sensibles o información no autorizada.</p></div><a class="btn btn-outline" href="casos.html">Volver a casos</a>`;}loadDetail();
