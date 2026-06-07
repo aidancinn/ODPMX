@@ -1,0 +1,317 @@
+/* =========================================================
+   ODPMX - INDEX.CSS
+   ========================================================= */
+
+/* ---------------- HERO ---------------- */
+
+.hero {
+    position: relative;
+
+    display: grid;
+    place-items: center;
+
+    min-height: 100vh;
+
+    overflow: hidden;
+    text-align: center;
+    isolation: isolate;
+
+    padding: 120px 7vw 80px;
+}
+
+/* ---------------- BACKGROUND ---------------- */
+
+.hero-bg {
+    position: absolute;
+    inset: 0;
+    z-index: -3;
+
+    background:
+        url("../assets/images/hero-odpmx.png")
+        center center / cover
+        no-repeat;
+
+    filter: brightness(.72) contrast(1.05);
+
+    transform: scale(1.03);
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: -2;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(0,0,0,.08),
+            rgba(0,0,0,.45) 55%,
+            rgba(0,0,0,.82) 100%
+        ),
+        linear-gradient(
+            to bottom,
+            rgba(0,0,0,.15),
+            rgba(0,0,0,.55) 65%,
+            #050505 100%
+        );
+}
+
+/* ---------------- CONTENT ---------------- */
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+
+    max-width: 1000px;
+
+    padding: 0 20px;
+}
+
+/* ---------------- TITLE ---------------- */
+
+.hero h1 {
+    margin: 0;
+
+    color: var(--white);
+
+    font-size: clamp(4.5rem, 12vw, 10rem);
+    font-weight: 950;
+
+    line-height: .9;
+    letter-spacing: -.07em;
+
+    text-shadow:
+        0 10px 30px rgba(0,0,0,.4),
+        0 20px 60px rgba(0,0,0,.4);
+}
+
+.hero h1 span {
+    color: var(--accent);
+}
+
+/* ---------------- SUBTITLE ---------------- */
+
+.subtitle {
+    margin-top: 24px;
+    margin-bottom: 10px;
+
+    font-family: Georgia, serif;
+
+    font-size: clamp(1rem, 2vw, 1.35rem);
+    font-weight: 600;
+
+    color: rgba(255,255,255,.92);
+
+    text-shadow:
+        0 5px 20px rgba(0,0,0,.5);
+}
+
+/* ---------------- STATEMENT ---------------- */
+
+.statement {
+    margin-bottom: 20px;
+
+    color: var(--white);
+
+    font-family: Georgia, serif;
+
+    font-size: clamp(1.5rem, 3vw, 2.4rem);
+    font-weight: 700;
+
+    line-height: 1.2;
+
+    text-shadow:
+        0 10px 30px rgba(0,0,0,.6);
+}
+
+/* ---------------- DESCRIPTION ---------------- */
+
+.hero-description {
+    max-width: 720px;
+
+    margin: 0 auto 36px;
+
+    color: rgba(255,255,255,.72);
+
+    font-size: 1.05rem;
+    line-height: 1.8;
+}
+
+/* ---------------- HERO BUTTON ---------------- */
+
+.hero .btn {
+    min-width: 190px;
+}
+
+/* ---------------- SCROLL INDICATOR ---------------- */
+
+.scroll-indicator {
+    position: absolute;
+
+    left: 50%;
+    bottom: 30px;
+
+    transform: translateX(-50%);
+
+    z-index: 5;
+
+    width: 28px;
+    height: 42px;
+
+    border: 1px solid rgba(255,255,255,.2);
+    border-radius: 999px;
+}
+
+.scroll-indicator::before {
+    content: "";
+
+    position: absolute;
+
+    left: 50%;
+    top: 8px;
+
+    transform: translateX(-50%);
+
+    width: 4px;
+    height: 4px;
+
+    border-radius: 50%;
+
+    background: white;
+
+    animation: scrollBounce 1.6s infinite;
+}
+
+@keyframes scrollBounce {
+
+    0% {
+        transform: translate(-50%,0);
+        opacity: 0;
+    }
+
+    40% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translate(-50%,14px);
+        opacity: 0;
+    }
+
+}
+
+/* ---------------- INTRO ---------------- */
+
+.two-column h2 {
+    max-width: 550px;
+}
+
+.two-column p {
+    margin-bottom: 20px;
+}
+
+/* ---------------- CARDS ---------------- */
+
+.cards-section h2 {
+    margin-bottom: 36px;
+    max-width: 850px;
+}
+
+.info-card h3 {
+    margin-bottom: 12px;
+}
+
+.info-card p {
+    margin: 0;
+}
+
+/* ---------------- EXPANSION ---------------- */
+
+.expansion {
+    padding-top: 40px;
+}
+
+.expansion .panel {
+    max-width: 1000px;
+    margin: auto;
+    text-align: center;
+}
+
+.expansion .panel p {
+    max-width: 760px;
+    margin: 0 auto 28px;
+}
+
+/* ---------------- SMALL ANIMATIONS ---------------- */
+
+.hero .btn,
+.info-card,
+.panel {
+    transition:
+        transform .3s ease,
+        opacity .3s ease;
+}
+
+.hero .btn:hover,
+.info-card:hover,
+.panel:hover {
+    transform: translateY(-4px);
+}
+
+/* ---------------- RESPONSIVE ---------------- */
+
+@media (max-width: 950px) {
+
+    .hero-content {
+        max-width: 700px;
+    }
+
+}
+
+@media (max-width: 850px) {
+
+    .hero {
+        padding: 120px 6vw 80px;
+    }
+
+    .hero h1 {
+        font-size: clamp(4rem, 18vw, 7rem);
+    }
+
+    .statement {
+        font-size: clamp(1.4rem, 7vw, 2rem);
+    }
+
+    .hero-description {
+        font-size: .95rem;
+    }
+
+}
+
+@media (max-width: 520px) {
+
+    .hero {
+        padding: 100px 6vw 80px;
+    }
+
+    .hero h1 {
+        font-size: 4rem;
+    }
+
+    .subtitle {
+        font-size: 1rem;
+    }
+
+    .statement {
+        font-size: 1.4rem;
+    }
+
+    .hero-description {
+        font-size: .92rem;
+    }
+
+    .hero .btn {
+        width: 100%;
+    }
+
+}
